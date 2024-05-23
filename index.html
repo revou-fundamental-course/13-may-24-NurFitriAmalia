@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katik - Hitung Luas dan Keliling Segitiga</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Katik</h1>
+        <p>Hai Sobat, Selamat datang di Katik :)</p>
+        <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+
+        <button class="tablink" onclick="openPage('LuasSegitiga', this, '#3498db')">Luas Segitiga</button>
+        <button class="tablink" onclick="openPage('KelilingSegitiga', this, '#3498db')">Keliling Segitiga</button>
+
+        <div id="LuasSegitiga" class="tabcontent">
+            <h2>Luas Segitiga</h2>
+            <div class="triangle-image">
+                <img src="triangle.png" alt="Segitiga">
+                <p class="triangle-info">
+                    Rumus Luas Segitiga yaitu : 
+                    <br> L = 1/2 x a x t 
+                    <br> Di mana : 
+                    <br> L = Luas 
+                    <br> a = Panjang Alas 
+                    <br> t = Tinggi
+                </p>
+            </div>
+            <form id="luasForm">
+                <label for="alas">Nilai Alas:</label>
+                <input type="number" id="alas" name="alas">
+                <label for="tinggi">Nilai Tinggi:</label>
+                <input type="number" id="tinggi" name="tinggi">
+            </form>
+            <button type="button" onclick="hitungLuas()">Hitung</button>
+            <p id="luasHasil"></p>
+            <button type="button" class="reset" onclick="resetForm()">Reset</button>
+        </div>
+
+        <div id="KelilingSegitiga" class="tabcontent">
+            <h2>Keliling Segitiga</h2>
+            <div class="triangle-image">
+                <img src="triangle.png" alt="Segitiga">
+                <p class="triangle-info">
+                    Rumus Keliling Segitiga yaitu :
+                    <br> K = S1 + S2 + S3  
+                    <br>Di mana :
+                    <br>K = Keliling 
+                    <br>S1 = Sisi A 
+                    <br>S2 = Sisi B 
+                    <br>S3 = Sisi C
+                </p>
+            </div>
+            <form id="kelilingForm">
+                <label for="sisiA">Sisi A:</label>
+                <input type="number" id="sisiA" name="sisiA">
+                <label for="sisiB">Sisi B:</label>
+                <input type="number" id="sisiB" name="sisiB">
+                <label for="sisiC">Sisi C:</label>
+                <input type="number" id="sisiC" name="sisiC">
+            </form>
+            <button type="button" onclick="hitungKeliling()">Hitung</button>
+            <p id="kelilingHasil"></p>
+            <button type="button" class="reset" onclick="resetForm()">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
